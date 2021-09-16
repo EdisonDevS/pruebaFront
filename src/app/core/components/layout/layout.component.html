@@ -1,9 +1,12 @@
-<mat-toolbar color="primary">
+<mat-toolbar color="primary" class="toolbar">
     <button
     mat-icon-button
     (click)="volver()"
   >
     <mat-icon>arrow_back</mat-icon>
+  </button>
+  <button (click)="logout()" mat-stroked-button color="accent">
+    Cerrar sesión
   </button>
 </mat-toolbar>
 

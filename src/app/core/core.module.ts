@@ -14,6 +14,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { AuthInterceptor } from './interceptor/auth-interceptor';
 import { AuthGuard } from './guards/auth.guard';
 import { GuestGuard } from './guards/guest.guard';
+import { MatButtonModule } from '@angular/material/button';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { GuestGuard } from './guards/guest.guard';
     MatToolbarModule,
     MatSidenavModule,
     MatIconModule,
+    MatButtonModule
   ],
   exports: [
     FlexLayoutModule,

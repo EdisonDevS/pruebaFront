@@ -3,6 +3,8 @@
 mat-toolbar {
   background: #004a9f;
   color: white;
+  display: flex;
+  justify-content: space-between;
 }
 
 mat-sidenav {
@@ -54,4 +56,8 @@ mat-sidenav-container {
 
 .logo-ceiba {
   height: inherit;
+}
+
+button {
+  color: aliceblue !important;
 }

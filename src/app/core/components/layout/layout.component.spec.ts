@@ -7,6 +7,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { RouterTestingModule } from '@angular/router/testing';
+
 import { LayoutComponent } from './layout.component';
 
 describe('LayoutComponent', () => {
@@ -23,7 +25,8 @@ describe('LayoutComponent', () => {
         MatButtonModule,
         MatSidenavModule,
         MatExpansionModule,
-        BrowserAnimationsModule
+        BrowserAnimationsModule,
+        RouterTestingModule
       ],
       schemas: [NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA]
     })

@@ -1,7 +1,7 @@
 <section fxLayout="col" fxLayoutAlign="center center" class="fill-available">
     <div class="form-container">
         <form [formGroup]="this.loginForm" (ngSubmit)="login()">
-            <div class="row">
+            <div >
                 <div class="field__container">
                     <mat-form-field>
                         <mat-label>
@@ -27,7 +27,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div >
                 <div class="button__container">
                     <button [disabled]="!loginForm.valid" id="login__btn-login" type="submit" class="full-width" mat-raised-button
                         color="primary" aria-label="Iniciar Sesión">

@@ -1,0 +1,23 @@
+<div *ngIf="control?.touched">
+    <mat-error *ngIf="control.hasError('required')">
+        El campo es requerido
+    </mat-error>
+    <mat-error *ngIf="control.hasError('email')">
+        El campo debe ser un email valido
+    </mat-error>
+    <mat-error *ngIf="control.hasError('min')">
+        El valor minimo para el campo es {{ control.getError('min').min }}, actual: {{ control.getError('min').actual }} 
+    </mat-error>
+    <mat-error *ngIf="control.hasError('max')">
+        El valor maximo para el campo es {{ control.getError('max').max }}, actual: {{ control.getError('max').actual }} 
+    </mat-error>
+    <mat-error *ngIf="control.hasError('minlength')">
+        La logitud minima es {{ control.getError('minlength').requiredLength }}, actual: {{ control.getError('minlength').actualLength }}
+    </mat-error>
+    <mat-error *ngIf="control.hasError('maxlength')">
+        La logitud maxima es {{ control.getError('maxlength').requiredLength }}, actual: {{ control.getError('maxlength').actualLength }}
+    </mat-error>
+    <mat-error *ngIf="control.hasError('pattern')">
+        Se debe cumplir la gramatica {{ control.getError('pattern').requiredPattern }}
+    </mat-error>
+</div>

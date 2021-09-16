@@ -1,0 +1,161 @@
+// Width
+@for $i from 1 through 10 {
+    .w-#{$i*10} {
+        width: #{$i * 10%} !important;
+    }
+}
+
+// Height
+@for $i from 1 through 10 {
+    .h-#{$i*10} {
+        height: #{$i * 10%};
+    }
+}
+
+// Margins
+@for $i from 0 through 5 {
+    .m-#{$i} {
+        margin: #{0.5 * $i}rem !important;
+    }
+
+    .mt-#{$i} {
+        margin-top: #{0.5 * $i}rem !important;
+    }
+
+    .mr-#{$i} {
+        margin-right: #{0.5 * $i}rem !important;
+    }
+
+    .mb-#{$i} {
+        margin-bottom: #{0.5 * $i}rem !important;
+    }
+
+    .ml-#{$i} {
+        margin-left: #{0.5 * $i}rem !important;
+    }
+}
+
+// Padding
+@for $i from 0 through 5 {
+    .p-#{$i} {
+        padding: #{0.5 * $i}rem !important;
+    }
+
+    .pt-#{$i} {
+        padding-top: #{0.5 * $i}rem !important;
+    }
+
+    .pr-#{$i} {
+        padding-right: #{0.5 * $i}rem !important;
+    }
+
+    .pb-#{$i} {
+        padding-bottom: #{0.5 * $i}rem !important;
+    }
+
+    .pl-#{$i} {
+        padding-left: #{0.5 * $i}rem !important;
+    }
+}
+
+.d-flex {
+    display: flex;
+}
+
+.d-l-block {
+    display: inline-block;
+}
+
+.d-block {
+    display: block;
+}
+
+.d-l {
+    display: inline;
+}
+
+.d-column {
+    flex-direction: column;
+}
+
+@for $i from 1 through 12 {
+    .grid-#{$i} {
+        width: percentage($i / 12) !important;
+        margin: 0 $spacin-th;
+    }
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.justify-items-center {
+    justify-content: center;
+}
+
+.justify-items-right {
+    justify-content: flex-end;
+}
+
+.grid-auto {
+    width: 100%;
+}
+
+.over-hidden {
+    overflow: hidden;
+}
+
+// Text alignments
+@each $align in $aligns {
+    .t-#{$align} {
+        text-align: #{$align} !important;
+    }
+}
+
+.p-r {
+    position: relative;
+}
+
+.p-a {
+    position: absolute;
+}
+
+.f-left {
+    float: left;
+}
+
+.f-right {
+    float: right;
+}
+
+.link  {
+    color: $primary-500 !important;
+    cursor: pointer;
+    &--disabled {
+        color: $color-text-3 !important;
+        pointer-events: none;
+        text-decoration: none;
+    }
+}
+
+.l-t {
+    border-top: $color-divisor solid 1px;
+}
+.l-r {
+    border-right: $color-divisor solid 1px;
+}
+.l-b {
+    border-bottom: $color-divisor solid 1px;
+}
+.l-l {
+    border-left: $color-divisor solid 1px;
+}
+
+@each $color,$index in $colorList {
+    .text--#{$index} {
+        color: $color;
+    }
+    .bg--#{$index} {
+        background-color: $color;
+    }
+}

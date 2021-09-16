@@ -1,0 +1,61 @@
+@mixin texto-centrado {
+    text-align: center;
+}
+
+h1, .text--title-1 {
+    font-size: 2.25rem;
+    color: $color-text-1;
+    line-height: 2.25rem;
+}
+
+h2, .text--title-2 {
+    font-size: 1.625rem;
+    color: $color-text-1;
+    line-height: 1.625rem;
+}
+
+h3, .text--title-3 {
+    font-size: 1.25rem;
+    color: $color-text-1;
+    line-height: 1.25rem;
+}
+
+h4, .text--subtitle {
+    font-size: 1.125rem;
+    color: $color-text-1;
+    line-height: 1.125rem;
+}
+
+p,
+span,
+li {
+    font-size: 1rem;
+}
+
+p, p > span {
+    color: $color-text-1;
+}
+
+a {
+    color: $primary-500;
+}
+
+.text {
+    &--big {font-size: 1.125rem;}
+    &--small {font-size: .875rem;}
+    &--bold { font-weight: bold;}
+    &--normal { font-weight: normal;}
+    &--medium { font-weight: 600;}
+    &--light { font-weight: 100;}
+    &--primary { color: $primary-500;}
+    &--secundary { color: $color-secundary;}
+    &--tertiary { color: $tertiary-color;}
+    &--gray { color: $color-text-1;}
+}
+
+.titulo-pagina {
+    @include texto-centrado;
+    font-size: xx-large !important;
+    font-weight: bolder !important;
+    padding-top: 20px;
+}

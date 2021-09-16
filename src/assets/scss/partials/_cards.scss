@@ -1,0 +1,71 @@
+mat-card.mat-card:not([class*=mat-elevation-z]){
+    box-shadow: 0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+mat-card.mat-card {
+    border-radius: 10px;
+    &.custom-card{
+        cursor: pointer;
+        padding-top: 0;
+        border: $color-divisor solid 1px;
+        box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+        overflow: hidden;
+        transition: all 0.2s ease-out;
+        max-width: 300px;
+    }
+}
+
+.custom-card{
+    &__image {
+        background-size: cover;
+        transition: all 0.2s ease-out;
+    }
+    &__text {
+        color: $primary-500;
+        font-weight: 600;
+    }
+    &__line {
+        position: absolute;
+        height: 4px;
+        width: 70px;
+        background: $tertiary-color;
+        top: 0;
+    }
+    &:hover {
+        transform: scale(1.025);
+        box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.2);
+        div[class$=__image] {
+            opacity: .75;
+        }
+    } 
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 0 solid #e9ecef;
+    border-radius: .25rem;
+    margin-bottom: 20px;
+
+    box-shadow: 0 3px 9px 0 rgba(169, 184, 200, .15);
+    -webkit-box-shadow: 0 3px 9px 0 rgba(169, 184, 200, .15);
+    -moz-box-shadow: 0 3px 9px 0 rgba(169, 184, 200, .15);
+
+    .card-title {
+        position: relative;
+        font-weight: 500;
+        margin-bottom: 10px;
+        color: #212529;
+        font-size: 16px;
+    }
+
+    .card-text {
+        color: #7c8798;
+        font-size: 14px;
+    }
+}

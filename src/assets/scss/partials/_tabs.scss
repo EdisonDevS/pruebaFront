@@ -1,0 +1,24 @@
+.mat-tab-group {
+    .mat-tab-label.mat-tab-label-active {
+        .mat-tab-label-content {
+            font-weight: bold;
+        }
+    }
+    .mat-tab-label {
+        border-radius: 10px 10px 0 0;
+        &.mat-tab-label-active {
+            background: $color-bg-gray-2;
+            .mat-tab-label-content {
+                font-weight: bold;
+            }
+        }
+    }
+    &.mat-primary {
+        .mat-ink-bar {
+            background: $tertiary-color;
+        }
+    }
+    .mat-tab-body-content {
+        padding: 10px;
+    }
+}

@@ -1,0 +1,8 @@
+// Modules
+@import "assets/scss/modules/modules-dir";
+// Partials
+@import "assets/scss/partials/partials-dir";
+//theme LogisCore
+@import 'assets/scss/theme';
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

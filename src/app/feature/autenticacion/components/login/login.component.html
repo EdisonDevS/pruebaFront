@@ -1,0 +1,40 @@
+<section fxLayout="col" fxLayoutAlign="center center" class="fill-available">
+    <div class="form-container">
+        <form [formGroup]="this.loginForm" (ngSubmit)="login()">
+            <div class="row">
+                <div class="field__container">
+                    <mat-form-field>
+                        <mat-label>
+                            Email
+                        </mat-label>
+                        <input matInput id="login__email" formControlName="email" type="text"
+                            placeholder="Ingresa tu Email" aria-label="Ingresa tu Email"/>
+                    </mat-form-field>
+                    <div *ngIf="!emailField.valid" id="login__email-error">
+                        <app-error-input [control]="getCampoFormulario('email')"></app-error-input>
+                    </div>
+                </div>
+                <div class="field__container">
+                    <mat-form-field>
+                        <mat-label>
+                            Contraseña
+                        </mat-label>
+                        <input matInput id="login__password" formControlName="password" type="password"
+                            placeholder="Ingresa tu contraseña" aria-label="Ingresa tu contraseña"/>
+                    </mat-form-field>
+                    <div *ngIf="!passwordField.valid" id="login__password-error">
+                        <app-error-input [control]="getCampoFormulario('password')"></app-error-input>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="button__container">
+                    <button [disabled]="!loginForm.valid" id="login__btn-login" type="submit" class="full-width" mat-raised-button
+                        color="primary" aria-label="Iniciar Sesión">
+                        Iniciar Sesión
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>

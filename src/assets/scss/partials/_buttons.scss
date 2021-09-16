@@ -1,0 +1,109 @@
+$type-button: mat-button,
+mat-raised-button,
+mat-stroked-button,
+mat-fab,
+mat-mini-fab;
+
+@each $btns in $type-button {
+
+    .full-width {
+      width: -webkit-fill-available;
+    }
+
+    button.#{$btns},
+    a.#{$btns} {
+        border-radius: 32px;
+        margin: 5px;
+        padding-left: 20px;
+        padding-right: 20px;
+
+        .icon:first-child {
+            margin: 0 5px 0 0;
+            font-size: 1.2rem;
+        }
+
+        @if $btns==mat-button {
+            color: $color-text-2;
+
+            .icon {
+                margin: 0 2px 0 0;
+                font-size: 0.9rem;
+            }
+
+            &.mat-warn {
+                color: $color-noti-error
+            }
+        }
+
+        @if $btns==mat-raised-button {
+            &.mat-warn {
+                color: $white
+            }
+
+            &.mat-primary:not([disabled="true"]) {
+                &:hover {
+                    background: $color-secundary;
+                }
+            }
+        }
+
+        @if $btns==mat-stroked-button {
+            border: $color-text-3 solid 2px;
+
+            span {
+                color: $color-text-2;
+            }
+
+            &.mat-primary:not([disabled="true"]) {
+                border-color: $primary-500;
+                span {
+                    color: currentColor;
+                }
+            }
+
+            &.mat-accent:not([disabled="true"]) {
+                border-color: $color-secundary;
+
+                span {
+                    color: currentColor;
+                }
+            }
+
+            &.mat-warn:not([disabled="true"]) {
+                border-color: $color-noti-error;
+
+                span {
+                    color: $color-noti-error;
+                }
+            }
+        }
+
+        @if $btns==mat-fab and mat-mini-fab {
+
+            &.mat-fab,
+            &.mat-mini-fab {
+                padding-left: initial;
+                padding-right: initial;
+            }
+
+            &.mat-warn {
+                color: $white
+            }
+        }
+
+        .menu-element & {
+            border: none;
+            border-radius: 0;
+            margin: 0;
+        }
+        [class^="icon-"], [class*=" icon-"] {
+            vertical-align: inherit;
+            margin: 0 2px;
+        }
+        .mat-button-wrapper {
+            > span {
+                vertical-align: inherit;
+            }
+        }
+    }
+}

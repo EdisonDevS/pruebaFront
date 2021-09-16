@@ -1,0 +1,29 @@
+mat-datepicker-toggle.mat-datepicker-toggle {
+    .mat-icon-button {
+        height: 2em;
+        width: 2em;
+        .mat-button-wrapper {
+            &:after {
+                content: "\e953";
+                font-family: $font-general-icon;
+                transform: translate(1px, 1px);
+                display: inline-block;
+                color: $primary-500;
+            }
+            > svg {
+                display: none;
+            }
+        }
+    }
+}
+
+mat-calendar {
+    .mat-calendar-controls {
+        .mat-calendar-arrow {
+            border-top-color: $primary-500;
+        }
+        button[mat-icon-button] {
+            color: $primary-500;
+        }
+    }
+}

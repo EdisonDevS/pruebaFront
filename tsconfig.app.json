@@ -1,0 +1,38 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./out-tsc/app",
+    "types": [],
+    "paths": {
+      "@core/*": [
+        "src/app/core/*"
+      ],
+      "@core-service/*": [
+        "src/app/core/services/*"
+      ],
+      "@test/*": [
+        "test/*"
+      ],
+      "@shared/*": [
+        "src/app/shared/*"
+      ],
+      "@camion/*": [
+        "src/app/feature/camion/*"
+      ],
+      "@carga/*": [
+        "src/app/feature/carga/*"
+      ],
+      "@contrato/*": [
+        "src/app/feature/contrato/*"
+      ]
+    }
+  },
+  "files": [
+    "src/main.ts",
+    "src/polyfills.ts"
+  ],
+  "include": [
+    "src/**/*.d.ts"
+  ]
+}

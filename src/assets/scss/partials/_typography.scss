@@ -1,0 +1,11 @@
+@mixin fontFace($name) {
+	@font-face {
+		font-family: $name;
+		src: url('~assets/fonts/#{$name}.eot');
+		src: url('~assets/fonts/#{$name}.eot') format('embedded-opentype')
+		url('~assets/fonts/#{$name}.woff') format('woff'),
+		url('~assets/fonts/#{$name}.ttf') format('truetype')
+	}
+}
+
+@include fontFace($font-general-icon);

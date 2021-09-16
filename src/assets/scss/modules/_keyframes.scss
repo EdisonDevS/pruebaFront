@@ -1,0 +1,43 @@
+@keyframes collapse {
+  0% {
+    width: 0px;
+  }
+
+  100% {
+    width: 300px;
+  }
+}
+
+@keyframes FadeScale {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes FadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes SlideBottonIn {
+  0% {
+    transform: translate(0, 100px) rotateX(-20deg);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(0, 0) rotateX(0deg);
+    opacity: 1;
+  }
+}

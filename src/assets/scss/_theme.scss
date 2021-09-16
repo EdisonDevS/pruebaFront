@@ -1,0 +1,107 @@
+@import "~@angular/material/theming";
+
+@include mat-core();
+
+$logis: (50: #e0f0f0,
+    100: #b3d8da,
+    200: #80bfc1,
+    300: #4da5a8,
+    400: #269195,
+    500: $primary-500,
+    600: darken($primary-500, 5%),
+    700: darken($primary-500, 10%),
+    800: darken($primary-500, 15%),
+    900: darken($primary-500, 20%),
+    A100: #85f8ff,
+    A200: #52f4ff,
+    A400: #1ff1ff,
+    A700: #05f0ff,
+    contrast: (50: $black-87-opacity,
+        100: $black-87-opacity,
+        200: $black-87-opacity,
+        300: $black-87-opacity,
+        400: $black-87-opacity,
+        500: white,
+        600: white,
+        700: white,
+        800: $white-87-opacity,
+        900: $white-87-opacity,
+        A100: $black-87-opacity,
+        A200: white,
+        A400: white,
+        A700: white,
+    ),
+);
+
+$logis-accent: (50: #e0f0f0,
+    100: #c2f0f1,
+    200: #98e5e8,
+    300: #6fdbde,
+    400: #45d1d5,
+    500: $color-secundary,
+    600: darken($color-secundary, 5%),
+    700: darken($color-secundary, 10%),
+    800: darken($color-secundary, 15%),
+    900: darken($color-secundary, 20%),
+    A100: #25bdc2,
+    A200: #1ac8cd,
+    A400: #0ed3d9,
+    A700: #03dee4,
+    contrast: (50: $black-87-opacity,
+        100: $black-87-opacity,
+        200: $black-87-opacity,
+        300: $black-87-opacity,
+        400: $black-87-opacity,
+        500: white,
+        600: white,
+        700: white,
+        800: $white-87-opacity,
+        900: $white-87-opacity,
+        A100: $black-87-opacity,
+        A200: white,
+        A400: white,
+        A700: white,
+    ),
+);
+
+$logis-warn: (50: #e0f0f0,
+    100: #f06f74,
+    200: #ed585e,
+    300: #eb4148,
+    400: #e82a32,
+    500: $color-noti-error,
+    600: darken($color-noti-error, 5%),
+    700: darken($color-noti-error, 10%),
+    800: darken($color-noti-error, 15%),
+    900: darken($color-noti-error, 20%),
+    A100: #e11820,
+    A200: #e7121a,
+    A400: #ed0c15,
+    A700: #f4050f,
+    contrast: (50: $black-87-opacity,
+        100: $black-87-opacity,
+        200: $black-87-opacity,
+        300: $black-87-opacity,
+        400: $black-87-opacity,
+        500: white,
+        600: white,
+        700: white,
+        800: $white-87-opacity,
+        900: $white-87-opacity,
+        A100: $black-87-opacity,
+        A200: white,
+        A400: white,
+        A700: white,
+    ),
+);
+
+$primary: mat-palette($logis, 500);
+$accent: mat-palette($logis-accent, 600, 300, 600);
+$warn: mat-palette($logis-warn, 300, 500, 800);
+
+$theme: mat-light-theme($primary, $accent, $warn);
+
+$custom-typography: mat-typography-config($font-family: $font-general);
+
+@include angular-material-theme($theme);
+//@include angular-material-typography($custom-typography);

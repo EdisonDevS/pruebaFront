@@ -1,0 +1,38 @@
+<section *ngIf="cuenta$ | async as cuenta">
+    <h1 class="titulo-pagina" aria-label="mi cuenta">Mi cuenta</h1>
+    <h2 class="subtitulos" [attr.aria-label]="'Número de cuenta: *' + cuenta.id">Número de cuenta: <span>*{{ cuenta.id }}</span></h2>
+    <h2 class="subtitulos" [attr.aria-label]="'Saldo disponible: ' + (cuenta.valorDisponible | currency:'USD')">Saldo disponible: <span>{{ cuenta.valorDisponible | currency:'USD' }}</span></h2>
+</section>
+
+<div class="wrapper">
+  
+    <div class="table">
+      
+      <mat-card class="row header">
+        <div class="cell">
+          Valor
+        </div>
+        <div class="cell">
+          Descripción
+        </div>
+        <div class="cell">
+          Fecha
+        </div>
+      </mat-card>
+      
+      <mat-card class="row" *ngFor="let movimiento of movimientos$ | async">
+        <div class="cell" data-title="Monto" [attr.aria-label]="'valor' + (this.movimiento.monto | currency:'USD') ">
+          {{ this.movimiento.monto | currency:'USD' }}
+        </div>
+        <div class="cell" data-title="Descripción" [attr.aria-label]="'Descripción' + this.movimiento.descripcion">
+          {{ this.movimiento.descripcion }}
+        </div>
+        <div class="cell" data-title="Fecha" [attr.aria-label]="'Fecha' + this.movimiento.createAt">
+          {{ this.movimiento.createAt }}
+        </div>
+      </mat-card>
+      
+    </div>
+    
+  </div>
+

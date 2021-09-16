@@ -1,0 +1,10 @@
+<mat-card class="card mat-elevation-z8">
+    <h2 [attr.aria-label]="'*' + cuenta?.id + ' - ' + cuenta?.tipoCuenta">*{{ cuenta?.id }} - {{ cuenta?.tipoCuenta }}</h2>
+    <mat-card-content>
+        <p class="card__monto" [attr.aria-label]="'saldo disponible ' + (cuenta?.valorDisponible | currency:'USD' : 'symbol' : '1.0-0')">{{ cuenta?.valorDisponible | currency:'USD' : 'symbol' : '1.0-0' }}</p>
+        <p>saldo disponible</p>
+    </mat-card-content>
+    <mat-card-footer>
+        <button mat-raised-button color="primary" class="card__btn-detalle" [routerLink]="'/movimientos/' + cuenta?.id" aria-label="ver detalles">Ver detalles</button>
+    </mat-card-footer>
+</mat-card>

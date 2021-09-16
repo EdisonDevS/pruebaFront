@@ -1,0 +1,77 @@
+@mixin media($consulta) {
+  $media-xlg: "(max-width: 1600px)"; // Resoluciones extragrandes
+  $media-lg: "(max-width: 1200px)"; // Resoluciones grandes
+  $media-md: "(max-width: 992px)"; // Escritorios
+  $media-sm: "(max-width: 768px)"; // Tablets
+  $media-xs: "(max-width : 480px)"; // Telefonos
+  $media-xxs: "(max-width : 320px)"; // iPhone Retina
+
+  @if $consulta==xxs {
+    @media #{$media-xxs} {
+      @content;
+    }
+  }
+
+  @if $consulta==xs {
+    @media #{$media-xs} {
+      @content;
+    }
+  }
+
+  @else if $consulta==sm {
+    @media #{$media-sm} {
+      @content;
+    }
+  }
+
+  @else if $consulta==md {
+    @media #{$media-md} {
+      @content;
+    }
+  }
+
+  @else if $consulta==lg {
+    @media #{$media-lg} {
+      @content;
+    }
+  }
+
+  @else if $consulta==xlg {
+    @media #{$media-xlg} {
+      @content;
+    }
+  }
+}
+
+@mixin btns($bg1, $bg2) {
+  background: $bg1;
+
+  &:hover {
+    background: darken($bg1, 10%);
+  }
+
+  &:focus,
+  &.focus {
+    box-shadow: 0 0 0 0.2rem rgba($bg1, 0.5);
+  }
+
+  &.disabled,
+  &:disabled {
+    background: $bg2;
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active {
+    background: $bg2;
+    border-color: darken($bg2, 10%);
+  }
+
+  &:not(:disabled):not(.disabled).active:focus,
+  &:not(:disabled):not(.disabled):active:focus {
+    box-shadow: 0 0 0 0.2rem rgba($bg2, 0.5);
+  }
+
+  &:focus {
+    background: darken($bg1, 10%);
+  }
+}

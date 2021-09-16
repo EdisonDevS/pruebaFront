@@ -1,0 +1,11 @@
+.card {
+    max-width: 80%;
+    margin: 20px auto;
+    &__monto {
+        font-weight: bolder;
+        font-size: xx-large;
+    }
+    &__btn-detalle {
+        width: -webkit-fill-available;
+    }
+}
